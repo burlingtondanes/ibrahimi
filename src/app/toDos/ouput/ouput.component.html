@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="col-xs-12">
+	
+		<app-input
+			(toDoAdded)="onToDoAdded($event)"></app-input>
+		<hr>
+		<ul class="list-group" style="cursor: pointer;">
+			<a 
+				class="list-group-item" 
+				*ngFor="let todo of todos"
+			>{{ todo.name }}</a>
+		</ul>
+			
+	</div>
+</div>

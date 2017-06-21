@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="col-xs-12">
+		<div class="row">
+			<label>What Would You Like To Do? </label>
+			<input 
+			type="text" 
+			class="form-control"
+			[(ngModel)]=userToDo
+			#nameInput>
+		</div>
+		<br>
+		<div class="row">
+			<button 
+			class="btn btn-success" 
+			type="submit"
+			[disabled]="userToDo === ''"
+			(click)="onAddToDo()"
+			> Submit </button>
+			<button 
+			class="btn btn-primary"
+			type="button"
+			[disabled]="userToDo === ''"
+			(click)="userToDo = ''"> Refresh </button>
+		</div>
+	</div>
+	
+</div>
